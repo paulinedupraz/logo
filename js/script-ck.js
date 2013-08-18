@@ -1,0 +1,1 @@
+$(document).ready(function(){function n(n,r){var i=0;switch(n.toUpperCase()){case"X":i=e*r;return i;case"Y":i=t*r;return i}}var e=15,t=10.4,r=$("#canvas")[0],i=new Raphael(r,500,500)});
