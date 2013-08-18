@@ -3,6 +3,12 @@ $(document).ready(function(){
 	var gridX = 23;
 	var gridY = 16;
 
+	/**
+	 * Return a number that respect the grid
+	 * @param  {String} axis
+	 * @param  {Number} num
+	 * @return {Number}
+	 */
 	function getGrig(axis, num){
 
 		var result = 0;
