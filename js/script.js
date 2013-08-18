@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
-	var gridX = 15;
-	var gridY = 10.4;
+	var gridX = 23;
+	var gridY = 16;
 
 	function getGrig(axis, num){
 
