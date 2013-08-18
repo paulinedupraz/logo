@@ -25,6 +25,7 @@ $(document).ready(function(){
 	var canvas = $('#canvas')[0];
  
 	var paper = new Raphael(canvas, 500, 500);
+	var paper = new Raphael(canvas, getGrig('x', 6), getGrig('y', 11));
 
 	
 
