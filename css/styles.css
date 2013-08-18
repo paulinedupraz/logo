@@ -6,6 +6,8 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 #canvas {
+  margin: 20px auto;
   width: 500px;
   height: 500px;
+  background: rgba(255, 0, 0, 0.1);
 }
