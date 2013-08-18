@@ -3,6 +3,10 @@ $(document).ready(function(){
 	var gridX = 23;
 	var gridY = 16;
 
+	var color1 = '#83346B';
+	var color2 = '#5A2961';
+
+	
 	/**
 	 * Return a number that respect the grid
 	 * @param  {String} axis
