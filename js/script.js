@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
 	var gridX = 23;
 	var gridY = 16;
@@ -6,28 +6,26 @@ $(document).ready(function(){
 	var color1 = '#83346B';
 	var color2 = '#5A2961';
 
-	
 	/**
 	 * Return a number that respect the grid
 	 * @param  {String} axis
 	 * @param  {Number} num
+	
 	 * @return {Number}
 	 */
-	function getGrig(axis, num){
+	function getGrig(axis, num) {
 
 		var result = 0;
 
-		switch(axis.toUpperCase()) {
+		switch (axis.toUpperCase()) {
 
-			case 'X' :
-				result = gridX*num;
-				return result;
-				break;
+		case 'X':
+			result = gridX * num;
+			return result;
 
-			case 'Y' :
-				result = gridY*num;
-				return result;
-				break;
+		case 'Y':
+			result = gridY * num;
+			return result;
 		}
 	}
 
@@ -38,15 +36,15 @@ $(document).ready(function(){
 	 * @return {Array}
 	 */
 	function polygonPath(points) {
-	
-		if(!points||points.length < 2) {
-			return []; 
+
+		if (!points || points.length < 2) {
+			return [];
 		}
 
 		var path = []; //will use path object type
-			path.push(['m',points[0], points[1]]);
-		
-		for (var i = 2; i < points.length; i+=2) {		
+			path.push(['m', points[0], points[1]]);
+
+		for (var i = 2; i < points.length; i += 2) {        
 			path.push([points[i], points[i+1]]);
 		}
 
