@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-	var gridX = 23;
-	var gridY = 16;
+	var gridX = 24,
+		gridY = 16,
 
 	var color1 = '#83346B';
 	var color2 = '#5A2961';
