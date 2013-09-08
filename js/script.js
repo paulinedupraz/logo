@@ -69,6 +69,17 @@ $(document).ready(function () {
 	var currentChart = Math.floor((Math.random() * charts.length)),
 		colors = charts[currentChart];
 
+	/**
+	 * Return a random color from the current chart
+	 * @return {String} 
+	 */
+	function getRandomColor() {
+		var length = colors.length,
+			random = Math.floor((Math.random() * length)),
+			color = colors[random];
+
+		return color;
+	}
 
 	/**
 	 * Return a number that respect the grid
