@@ -65,6 +65,10 @@ $(document).ready(function () {
 				'#8b7fa4']
 		];
 
+	// get a random chart
+	var currentChart = Math.floor((Math.random() * charts.length)),
+		colors = charts[currentChart];
+
 
 	/**
 	 * Return a number that respect the grid
