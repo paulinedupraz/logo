@@ -177,4 +177,69 @@ $(document).ready(function () {
 			'stroke-width': 0
 		});
 		
+
+		/**
+		 * Animate the color of each triangle
+		 */
+		$('#canvas').mouseenter(function(){
+			launchAnimation();
+		}).mousedown(function(){
+			launchAnimation();
+		});
+
+		function launchAnimation(){
+				var color = '';
+				var previousColor = '';
+				var duration = 0;
+				var delay = 0;
+				var animation;
+
+				for(var i = 0; i < triangles.length; i++){
+					previousColor = color;
+					color = getRandomColor();
+
+					if (color == previousColor){
+						color = getRandomColor();
+					}
+		
+					duration = Math.floor((Math.random()*500)+100);
+					delay = Math.floor((Math.random()*500));
+
+					animation = Raphael.animation({
+						'fill': color,
+						'stroke': color,
+						'easing': 'linear'
+					}, duration, function(){
+						launchAnimation();
+					});
+					
+					triangles[i].stop().animate(animation.delay(delay));
+				}
+			}
+
+
+		/**
+		 * Reset the color of each triangle
+		 */
+		$('#canvas').mouseleave(function(){
+			var color = '#ffffff';
+			var duration = 0;
+			var delay = 0;
+			var animation;
+			
+			for(var i = 0; i < triangles.length; i++){
+				duration = Math.floor((Math.random()*600)+100);
+				delay = Math.floor((Math.random()*500));
+
+				animation = Raphael.animation({
+					'fill': color,
+					'stroke': color,
+					'easing': 'linear'
+				}, duration);
+
+				triangles[i].stop().animate(animation.delay(delay));
+			}
+		});
+
+
 });
